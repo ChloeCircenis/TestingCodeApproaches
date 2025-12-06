@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class TickTackToeTest {
     @Test
     public void gameStartTest(){
-        TickTackToe game = new TickTackToe().Builder()
+        TicTacToe game = new TicTacToe().Builder()
                 .emptyNbyNGameBoard(3)
+                .createTwoPlayers()
                 .build();
-        assertTrue(game.board.getEntries() == null);
-        assertTrue(game.players.size()==2);
+        assertTrue(game.isBoardEmpty());
     }
     @Test
     public void gameEndTest(){
