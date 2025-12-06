@@ -16,9 +16,9 @@ public class TickTackToeTest {
     }
     @Test
     public void gameEndTest(){
-        TicTacToe game = new TicTacToe.Builder()
+        TicTacToe game = new TicTacToe().Builder()
                 .emptyNbyNGameBoard(1)
-                .createTwoPlayers()
+                .createTwoPlayers
                 .build();
         game.makeMove(1,1);
         assertFalse(game.isBoardEmpty());
