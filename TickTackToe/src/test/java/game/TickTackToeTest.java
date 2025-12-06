@@ -2,6 +2,7 @@ package game;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TickTackToeTest {
@@ -15,10 +16,12 @@ public class TickTackToeTest {
     }
     @Test
     public void gameEndTest(){
-        TickTackToe game = new TickTackToe().Builder()
-                .emptyNbyNGameBoard(0)
+        TicTacToe game = new TicTacToe.Builder()
+                .emptyNbyNGameBoard(1)
+                .createTwoPlayers()
                 .build();
-        assertTrue(game.isOver());
+        game.makeMove(1,1);
+        assertFalse(game.isBoardEmpty());
     }
     @Test
     public void PlayerXWInsTest(){

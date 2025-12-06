@@ -10,7 +10,7 @@ public class TicTacToe {
     private Player currentPlayer;
     private static final char EMPTY = ' ';
 
-    private TicTacToe(int size, Player player1, Player player2) {
+    public TicTacToe(int size, Player player1, Player player2) {
         this.size = size;
         this.board = new char[size][size];
         this.player1 = player1;
