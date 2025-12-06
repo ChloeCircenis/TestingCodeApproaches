@@ -68,22 +68,29 @@ public class TicTacToeTest {
     }
     @Test
     public void TestBoard(){
+        int moves = 0;
         TicTacToe game = new TicTacToe.Builder()
                 .size(3)
                 .setTwoPlayers()
                 .build();
         if(game.isValidMove(2,2)){
             game.makeMove(2,2);
+            moves++;
             game.switchPlayer();
             game.printBoard();
         }
         if(game.isValidMove(2,2)){
             game.makeMove(2,2);
+            moves++;
             game.switchPlayer();
             game.printBoard();
         }
-        game.switchPlayer();
-        game.makeMove(1,2);
-        game.printBoard();
+        if(game.isValidMove(1,2)){
+            game.makeMove(1,2);
+            moves++;
+            game.switchPlayer();
+            game.printBoard();
+        }
+        assertEquals(2, moves);
     }
 }
