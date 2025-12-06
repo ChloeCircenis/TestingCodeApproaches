@@ -2,7 +2,7 @@ package game;
 
 
 public class TicTacToe {
-    private char[][] board;
+    private final char[][] board;
     private final int size;
     private final Player player1;
     private final Player player2;
@@ -27,11 +27,19 @@ public class TicTacToe {
     }
 
     public void printBoard() {
-        int row = 0;
+
         int col = 0;
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board.length; j++) {
-                System.out.print(" | " +board[i][j]+ " | ");
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print("| " +board[i][j]+ " |");
+                if(col==size-1){
+                    System.out.print("\n");
+                }
+                col++;
+                if(col==size){
+                    col = 0;
+                }
+
             }
         }
     }
@@ -43,7 +51,7 @@ public class TicTacToe {
     public boolean isValidMove(int row, int col) {
         return row >= 0 && row < size &&
                 col >= 0 && col < size &&
-                board[row][col] == EMPTY;
+                board[row-1][col-1] == EMPTY;
     }
 
     public void makeMove(int row, int col) {

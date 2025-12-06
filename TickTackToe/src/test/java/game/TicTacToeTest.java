@@ -20,6 +20,7 @@ public class TicTacToeTest {
                 .setTwoPlayers()
                 .build();
         game.makeMove(1,1);
+        game.printBoard();
         assertFalse(game.isBoardEmpty());
     }
     @Test
@@ -71,10 +72,18 @@ public class TicTacToeTest {
                 .size(3)
                 .setTwoPlayers()
                 .build();
-        game.makeMove(2,2);
-        System.out.print(game.printBoard());
+        if(game.isValidMove(2,2)){
+            game.makeMove(2,2);
+            game.switchPlayer();
+            game.printBoard();
+        }
+        if(game.isValidMove(2,2)){
+            game.makeMove(2,2);
+            game.switchPlayer();
+            game.printBoard();
+        }
         game.switchPlayer();
         game.makeMove(1,2);
-
+        game.printBoard();
     }
 }
