@@ -1,5 +1,4 @@
 package game;
-import java.util.Scanner;
 
 
 public class TicTacToe {
@@ -27,8 +26,14 @@ public class TicTacToe {
         }
     }
 
-    public char[][] getBoard() {
-        return board;
+    public void printBoard() {
+        int row = 0;
+        int col = 0;
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                System.out.print(" | " +board[i][j]+ " | ");
+            }
+        }
     }
 
     public Player getCurrentPlayer() {
@@ -42,7 +47,8 @@ public class TicTacToe {
     }
 
     public void makeMove(int row, int col) {
-        board[row][col] = currentPlayer.getSymbol();
+        board[row-1][col-1] = currentPlayer.getSymbol();
+        System.out.print("Player " + currentPlayer.getName() + " is making new move at ("+ row + ", " + col + ")\n");
     }
     protected boolean checkRows(char symbol){
         for (int i = 0; i < size; i++) {
@@ -98,6 +104,13 @@ public class TicTacToe {
         char symbol = currentPlayer.getSymbol();
         return( checkRows(symbol) || checkCols(symbol) ||  checkLeftDiagonal(symbol) || checkRightDiagonal(symbol));
     }
+    public Player getWinner() {
+        if (checkWin()) {
+            System.out.println(currentPlayer.getName() + " wins!\n");
+            return currentPlayer;
+        }
+        return null;
+    }
 
     public boolean isBoardFull() {
         for (int i = 0; i < size; i++) {
@@ -135,16 +148,13 @@ public class TicTacToe {
         private Player player2;
 
         public Builder size(int n) {
-            if (n < 3) {
-                throw new IllegalArgumentException("Board size must be >= 3");
-            }
             this.size = n;
             return this;
         }
 
-        public Builder setPlayers(Player p1, Player p2) {
-            this.player1 = p1;
-            this.player2 = p2;
+        public Builder setTwoPlayers() {
+            this.player1 = new Player("player 1", 'X');
+            this.player2 = new Player("player 2", 'O');
             return this;
         }
 
