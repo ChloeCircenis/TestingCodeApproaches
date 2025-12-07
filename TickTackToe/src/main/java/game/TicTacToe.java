@@ -98,6 +98,13 @@ public class TicTacToe {
         }
         return diagL;
     }
+    public void clearBoard(){
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                board[i][j] = EMPTY;
+            }
+        }
+    }
     protected boolean checkRightDiagonal(char symbol){
         boolean diag2 = true;
         for (int i = 0; i < size; i++) {
@@ -114,7 +121,7 @@ public class TicTacToe {
     }
     public Player getWinner() {
         if (checkWin()) {
-            System.out.println(currentPlayer.getName() + " wins!\n");
+            System.out.println("Player " + currentPlayer.getName() + " wins!\n");
             return currentPlayer;
         }
         return null;
@@ -127,6 +134,9 @@ public class TicTacToe {
                     return false;
                 }
             }
+        }
+        if(!checkWin()){
+            System.out.println("It's a Cats Game!\n");
         }
         return true;
     }
@@ -161,8 +171,8 @@ public class TicTacToe {
         }
 
         public Builder setTwoPlayers() {
-            this.player1 = new Player("player 1", 'X');
-            this.player2 = new Player("player 2", 'O');
+            this.player1 = new Player("X", 'X');
+            this.player2 = new Player("O", 'O');
             return this;
         }
 
