@@ -94,8 +94,7 @@ public class BadTicTacToe {
     public void switchPlayer() {
         if(currentPlayer == player1) {
             currentPlayer = player2;
-        }
-        else if(currentPlayer == player2) {
+        } else if(currentPlayer == player2) {
             currentPlayer = player1;
         }
     }
