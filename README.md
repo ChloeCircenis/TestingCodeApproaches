@@ -76,7 +76,7 @@ Here’s a basic guideline for building and running this project, though you may
 - ./gradlew test --tests "GoodTicTacToeTest"
 - ./gradlew test --tests "BadTicTacToeTest"
 - ./gradlew cucumber
-- - ./gradlew test
+- ./gradlew test
 
 
 ## Running Static Tests
