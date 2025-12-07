@@ -76,6 +76,8 @@ Here’s a basic guideline for building and running this project, though you may
 - ./gradlew test --tests "GoodTicTacToeTest"
 - ./gradlew test --tests "BadTicTacToeTest"
 - ./gradlew cucumber
+- - ./gradlew test
+
 
 ## Running Static Tests
 - Install SonarQube for IDE from IntelliJ plugin marketplace
@@ -87,9 +89,6 @@ Here’s a basic guideline for building and running this project, though you may
     - Provide a new name and select the desired Project.
     - Navigate back to Quality Profiles and select the ellipses for your new Quality Profile.
     - Click Activate More Rules and select your desired ruleset - this research activated all. 
-
-# About
-This research project is authored by the contributors of this repository. It aims to help developers understand the strengths and tradeoffs of unit testing, BDD, and static testing in Java projects.
 
 
 
