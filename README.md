@@ -14,7 +14,7 @@ The goal is to demonstrate how each approach works (with code examples) and high
 
 ---
 # Project File Structure
-
+```bash
 TestingCodeApproaches/
 │
 ├── TickTackToe/                          # Java example project used to demonstrate testing approaches
@@ -40,7 +40,7 @@ TestingCodeApproaches/
 │
 ├── README.md
 └── build.gradle.kts
-
+```
 ---
 
 ## Dependencies  
@@ -62,6 +62,7 @@ Here’s a basic guideline for building and running this project, though you may
 
 ### Clone the repo
 git clone https://github.com/ChloeCircenis/TestingCodeApproaches.git
+
 cd TestingCodeApproaches
 
 ### Build
