@@ -98,6 +98,13 @@ public class TicTacToe {
         }
         return diagL;
     }
+    public void clearBoard(){
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                board[i][j] = EMPTY;
+            }
+        }
+    }
     protected boolean checkRightDiagonal(char symbol){
         boolean diag2 = true;
         for (int i = 0; i < size; i++) {
