@@ -1,9 +1,10 @@
 # Testing Code: A Three-Pronged Comparison of Common Approaches
-  Jay Michuda and Chloe Circenis 
-  Object Oriented Analysis and Design
-  University of Colorado, Boulder
-  Professor Bill Wright
-  12/6/2025
+ 
+> ### Jay Michuda & Chloe Circenis  
+> **Object Oriented Analysis and Design**  
+> University of Colorado Boulder  
+> **Professor:** Bill Wright  
+> **Date:** December 6, 2025
 ---
 This research aims to examine the benefits of three popular testing methodologies: 
 - Unit Testing / Test-Driven Development (TDD)  
