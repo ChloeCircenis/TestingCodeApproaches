@@ -55,7 +55,7 @@ You'll need the following tools/libraries to build and test the project:
 - For BDD: a framework that supports Gherkin + Java (e.g. Cucumber-JVM)  
 - Gradle  
 - [SonarQube Community Edition Version 11.6.0.83783](https://www.sonarsource.com/products/sonarqube/downloads/?utm_source=google&utm_medium=cpc&utm_campaign=SQ-NA-US-West-Brand&utm_content=Brand-Server&utm_term=sonar%20qube&s_campaign=SQ-NA-US-West-Brand&s_content=153022664286&s_category=Paid&s_source=Paid%20Search&s_origin=Google&cq_src=google_ads&cq_cmp=20640594616&cq_con=153022664286&cq_term=sonar%20qube&cq_med=&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&gad_source=1&gad_campaignid=20640594616&gclid=EAIaIQobChMI7vnlmOSqkQMVyQfvAh0NAws8EAAYASABEgJsOvD_BwE)
-- IntelliJ Plugin
+- SonarQube for IDE version 11.6.0.83783 IntelliJ Plugin (download from marketplace)
 
 ---
 
